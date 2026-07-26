@@ -35,7 +35,7 @@ void DisplayMenu()
 	cout << "4. Divide" << endl;
 	cout << "5. Exit" << endl;
 }
-
+// Scientific mode coming soon
 
 int main()
 {
