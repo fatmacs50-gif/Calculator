@@ -29,6 +29,25 @@ double Divide(double num1, double num2)
 	}
 	return num1 / num2;
 }
+// New Functions :
+
+double Mod(int num1, int num2)
+{
+	return num1 % num2;
+}
+
+double power(double base, int exp)
+{
+	double resl = 1;
+	for (int i = 0; i < exp; i++)
+	{
+		resl *= base;
+
+	}
+	return resl;
+}
+
+
 
 void DisplayMenu()
 {
