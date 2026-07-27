@@ -63,6 +63,10 @@ void DisplayMenu()
 	cout << "7. Exit" << endl;
 
 }
+void ScientificNotation(double num)
+{
+	cout << "Scientific Notation: " << scientific << num << endl;
+}
 
 
 int main()
