@@ -4,9 +4,6 @@
 #include <iostream>
 using namespace std;
 
-// main vwesion
-
-//UI version 
 
 double Add(double num1, double num2)
 {
@@ -29,24 +26,29 @@ double Divide(double num1, double num2)
 	}
 	return num1 / num2;
 }
-// New Functions :
 
-double Mod(int num1, int num2)
-{
-	return num1 % num2;
-}
-
-double power(double base, int exp)
-{
-	double resl = 1;
-	for (int i = 0; i < exp; i++)
+	int Mod(int num1, int num2)
 	{
-		resl *= base;
+		if (num2 == 0)
+		{
+			cout << "Error: Cannot mod by zero" << endl;
+			return 0;
+		}
+
+		return num1 % num2;
+	}
+
+	double power(double base, int exp)
+	{
+		double resl = 1;
+		for (int i = 0; i < exp; i++)
+		{
+			resl *= base;
+
+		}
+		return resl;
 
 	}
-	return resl;
-}
-
 
 
 void DisplayMenu()
@@ -56,9 +58,12 @@ void DisplayMenu()
 	cout << "2. Subtract" << endl;
 	cout << "3. Multiply" << endl;
 	cout << "4. Divide" << endl;
-	cout << "5. Exit" << endl;
+	cout << "5. Modulus" << endl;
+	cout << "6. Power" << endl;
+	cout << "7. Exit" << endl;
+
 }
-// Scientific mode coming soon
+
 
 int main()
 {
@@ -70,7 +75,7 @@ int main()
 
 		cout << "Enter Your Choice ";
 		cin >> choice;
-		if (choice == 5)
+		if (choice == 7)
 
 		{
 			cout << "Thanks for using Calculator.\n";
@@ -94,10 +99,12 @@ int main()
 		case 4 :
 			cout << " Result: " <<Divide(num1, num2) << endl;
 			break;
-
-
-
-
+		case 5:
+			cout << " Result: " <<Mod((int)num1, (int)num2) << endl;
+			break;
+		case 6:
+			cout << " Result: " <<power(num1, (int)num2) << endl;
+			break;
 
 		default :
 			cout << "Invalid Choice" << endl;
